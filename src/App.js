@@ -1,26 +1,33 @@
+/** @jsx jsx */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { jsx } from '@emotion/core';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import libraries from './libraries';
+import Main from './1/Main';
 
+const AppCSS = {
+  textAlign: 'center'
+};
+
+const AppMainCSS = {
+  backgroundColor: '#282c34',
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  color: 'white',
+  fontSize: 'calc(10px + 2vmin)',
+};
+
+const App = () => (
+  <div css={AppCSS}>
+    <main css={AppMainCSS}>
+      <LibContext.Provider value={libraries}>
+        <Main />
+      </LibContext.Provider>
+    </main>
+  </div>
+);
+
+export const LibContext = React.createContext(libraries);
 export default App;
