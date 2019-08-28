@@ -7,12 +7,17 @@ import { LibContext } from '../App';
 type Props = { libId: string };
 const Details = ({ libId }: Props): JSX.Element => {
   const libraries = useContext(LibContext);
+  const curLib = libraries[libId];
+  const { name, description } = curLib;
   return (
-    <main>
-      <h3>
-        {libId}
-      </h3>
-    </main>
+    <>
+      <h2>
+        {name}
+      </h2>
+      <p>
+        {description}
+      </p>
+    </>
   )
 }
 

@@ -8,13 +8,13 @@ import { LibContext } from '../App';
 const List = (): JSX.Element => {
   const libraries = useContext(LibContext);
   return (
-    <main>
+    <>
       {Object.entries(libraries).map(([key, { name }]) => (
         <>
-          <h3>{name}</h3> <Link to={`/${key}`}>View Details</Link>
+          <h3>{name} &nbsp;&nbsp; // &nbsp; <Link to={`/${key}`}>View Details</Link></h3>
         </>
       ))}
-    </main>
+    </>
   )
 }
 
