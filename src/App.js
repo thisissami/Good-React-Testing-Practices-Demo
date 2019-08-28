@@ -3,11 +3,11 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import { Router } from '@reach/router';
 
-// 1 - With Context
+// With Context
 // import List from './WithContext/List';
 // import Details from './WithContext/Details';
 
-// 1 - With Props
+// With Props
 import List from './WithProps/List';
 import Details from './WithProps/Details';
 
