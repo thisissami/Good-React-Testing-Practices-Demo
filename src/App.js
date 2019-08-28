@@ -3,8 +3,13 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import { Router } from '@reach/router';
 
-import List from './1/List';
-import Details from './1/Details';
+// 1 - With Context
+// import List from './WithContext/List';
+// import Details from './WithContext/Details';
+
+// 1 - With Props
+import List from './WithProps/List';
+import Details from './WithProps/Details';
 
 import libraries from './libraries';
 
@@ -35,8 +40,8 @@ const App = () => (
           Useful React Libraries
         </u></h2>
         <Router>
-          <List path="/" />
-          <Details path="/:libId" />
+          <List path="/" libraries={libraries} />
+          <Details path="/:libId" libraries={libraries} />
         </Router>
       </LibContext.Provider>
     </main>

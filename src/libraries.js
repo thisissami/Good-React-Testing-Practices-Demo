@@ -3,10 +3,10 @@ export type LibDetails = {
   description: string;
 };
 
-type Libraries = Record<string, LibDetails>;
+export type Libraries = Record<string, LibDetails>;
 
 const libraries: Libraries = {
-  reactTestingLib: {
+  reactTestingLibrary: {
     name: 'React Testing Library',
     description: 'This is the best library for creating effective tests that give you confidence in your React application.'
   },
